@@ -1,4 +1,4 @@
-![REHABPAINANALYSER](https://raw.githubusercontent.com/joab40/RehabPainAnalyzer/data/test2.jpg)
+![REHABPAINANALYSER](https://raw.githubusercontent.com/joab40/RehabPainAnalyzer/data/logo.jpg)
 # RehabRawAnalyser
 Pain Analyzer App
 
