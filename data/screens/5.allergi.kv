@@ -1,0 +1,136 @@
+ShowcaseScreen:
+	name: '5.Allergi'
+
+	GridLayout:
+
+		cols: 7
+		spacing: '8dp'
+		size_hint_y: None
+		height: self.minimum_height
+
+		Label:
+			text: 'Symptoms'
+
+        ToggleButton:
+			size_hint_y: None
+			height: '48dp'
+			text: 'None'
+			state: 'down'
+			group: 'g1'
+			on_press: root.one()
+
+		ToggleButton:
+			size_hint_y: None
+			height: '48dp'
+			text: 'Eyes'
+			group: 'g1'
+			on_press: root.one()
+
+		ToggleButton:
+			size_hint_y: None
+			height: '48dp'
+			text: 'Nose'
+			group: 'g1'
+
+		ToggleButton:
+			size_hint_y: None
+			height: '48dp'
+			text: 'Throat'
+			group: 'g1'
+		ToggleButton:
+			size_hint_y: None
+			height: '48dp'
+			text: 'Body'
+			group: 'g1'
+		ToggleButton:
+			size_hint_y: None
+			height: '48dp'
+			text: 'Mixed'
+			group: 'g1'
+
+
+	GridLayout:
+
+		cols: 2
+		spacing: '8dp'
+		size_hint: .5, None
+		height: self.minimum_height
+
+		Label:
+			text: 'Exposed to Cat'
+
+		CheckBox:
+			size_hint_y: None
+			height: '48dp'
+
+        Label:
+			text: 'Exposed to Dog'
+
+		CheckBox:
+			size_hint_y: None
+			height: '48dp'
+
+		Label:
+			text: 'Exposed to Horse'
+
+		CheckBox:
+			size_hint_y: None
+			height: '48dp'
+
+		Label:
+			text: 'Exposed to Pollen'
+
+		CheckBox:
+			size_hint_y: None
+			height: '48dp'
+
+
+
+    BoxLayout:
+		size_hint_y: None
+		height: '48dp'
+		Label:
+			text: 'Kestine'
+
+		Slider:
+			id: s1
+			step: 0.5
+			min: 0
+			max: 10
+			on_value: root.slidervalue(s1.value)
+
+		Label:
+			text: '{}'.format(s1.value)
+
+    BoxLayout:
+		size_hint_y: None
+		height: '48dp'
+		Label:
+			text: 'Allegra'
+
+		Slider:
+			id: s2
+			step: 0.5
+			min: 0
+			max: 10
+			on_value: root.slidervalue(s2.value)
+
+		Label:
+			text: '{}'.format(s2.value)
+
+    BoxLayout:
+		size_hint_y: None
+		height: '48dp'
+		Label:
+			text: 'Clarityn'
+
+		Slider:
+			id: s3
+			step: 0.5
+
+			min: 0
+			max: 10
+			on_value: root.slidervalue(s3.value)
+
+		Label:
+			text: '{}'.format(s3.value)

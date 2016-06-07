@@ -1,0 +1,154 @@
+ShowcaseScreen:
+	name: '3.Activity'
+
+	GridLayout:
+
+		cols: 6
+		spacing: '8dp'
+		size_hint_y: None
+		height: self.minimum_height
+
+		Label:
+			text: 'Sleep Hours'
+
+		ToggleButton:
+			size_hint_y: None
+			height: '48dp'
+			text: '3h less'
+			group: 'g1'
+        ToggleButton:
+			size_hint_y: None
+			height: '48dp'
+			text: '1.5h less'
+			group: 'g1'
+
+		ToggleButton:
+			size_hint_y: None
+			height: '48dp'
+			text: 'Average'
+			state: 'down'
+			group: 'g1'
+		ToggleButton:
+			size_hint_y: None
+			height: '48dp'
+			text: '1.5h more'
+			group: 'g1'
+		ToggleButton:
+			size_hint_y: None
+			height: '48dp'
+			text: '3h more'
+			group: 'g1'
+
+
+		Label:
+			text: 'Sleep Positions'
+
+		ToggleButton:
+			size_hint_y: None
+			height: '48dp'
+			text: 'Back'
+			group: 'g3'
+        ToggleButton:
+			size_hint_y: None
+			height: '48dp'
+			text: 'Front'
+			group: 'g3'
+
+		ToggleButton:
+			size_hint_y: None
+			height: '48dp'
+			text: 'Left side'
+			group: 'g3'
+		ToggleButton:
+			size_hint_y: None
+			height: '48dp'
+			text: 'Right side'
+			group: 'g3'
+		ToggleButton:
+			size_hint_y: None
+			height: '48dp'
+			text: 'Mixed'
+			group: 'g3'
+
+
+
+
+    BoxLayout:
+		size_hint_y: None
+		height: '48dp'
+
+		Label:
+			text: 'Watched TV'
+
+		Slider:
+			id: s1
+			step: 0.5
+			min: 0
+			max: 10
+
+		Label:
+			text: '{}'.format(s1.value)
+
+	BoxLayout:
+		size_hint_y: None
+		height: '48dp'
+
+		Label:
+			text: 'Walked Km'
+
+		Slider:
+			id: s2
+			step: 0.5
+			min: 0
+			max: 20
+
+		Label:
+			text: '{}'.format(s2.value)
+
+	BoxLayout:
+		size_hint_y: None
+		height: '48dp'
+
+		Label:
+			text: 'Running Km'
+
+		Slider:
+			id: s3
+			step: 0.5
+			min: 0
+			max: 20
+
+		Label:
+			text: '{}'.format(s3.value)
+
+	BoxLayout:
+		size_hint_y: None
+		height: '48dp'
+
+		Label:
+			text: 'Garden Work'
+
+		Slider:
+			id: s4
+			step: 0.5
+			min: 0
+			max: 20
+
+		Label:
+			text: '{}'.format(s4.value)
+
+	BoxLayout:
+		size_hint_y: None
+		height: '48dp'
+
+		Label:
+			text: 'Massage 10min'
+
+		Slider:
+			id: s5
+			step: 1
+			min: 0
+			max: 10
+
+		Label:
+			text: '{}'.format(s5.value)

@@ -1,0 +1,49 @@
+ShowcaseScreen:
+	name: '7.Save'
+
+
+	GridLayout:
+
+		cols: 1
+		spacing: '8dp'
+		size_hint_y: None
+		height: self.minimum_height
+
+        Label:
+			text: 'Next'
+
+		ToggleButton:
+			size_hint_y: None
+			height: '48dp'
+			text: 'Create Graph'
+			group: 'g1'
+            on_press: root.updatecanvas()
+
+		ToggleButton:
+			size_hint_y: None
+			height: '48dp'
+			text: 'Analyze'
+			group: 'g1'
+			on_press: root.one()
+
+		ToggleButton:
+			size_hint_y: None
+			height: '48dp'
+			text: 'Save'
+			group: 'g1'
+			on_press: root.change_commit()
+
+
+
+		ToggleButton:
+			size_hint_y: None
+			height: '48dp'
+			text: 'Exit'
+			group: 'g1'
+
+
+
+
+
+
+

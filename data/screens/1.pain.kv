@@ -1,0 +1,171 @@
+ShowcaseScreen:
+	name: '1.Pain'
+
+	BoxLayout:
+		size_hint_y: None
+		height: '48dp'
+
+		Label:
+			text: 'Pain Levels [0 - 10]. 0 None. 5 Medium Average. 10 Maximum Frustration'
+    BoxLayout:
+		size_hint_y: None
+		height: '28dp'
+		Label:
+			text: 'Headache'
+		Slider:
+			id: s0
+			step: 0.5
+			min: 0
+			max: 10
+			on_value: root.update_data('headache',s0.value)
+		Label:
+			text: '{}'.format(s0.value)
+    BoxLayout:
+		size_hint_y: None
+		height: '28dp'
+		Label:
+			text: 'Neck Spinal Cervical'
+		Slider:
+			id: s1
+			step: 0.5
+			min: 0
+			max: 10
+			on_value: root.update_data('spinalneck',s1.value)
+		Label:
+			text: '{}'.format(s1.value)
+	BoxLayout:
+		size_hint_y: None
+		height: '28dp'
+		Label:
+			text: 'Middle Spinal Thoracic'
+		Slider:
+			id: s2
+			step: 0.5
+			min: 0
+			max: 10
+			on_value: root.update_data('spinalmiddle',s2.value)
+		Label:
+			text: '{}'.format(s2.value)
+
+	BoxLayout:
+		size_hint_y: None
+		height: '28dp'
+		Label:
+			text: 'Low Spinal Lumbar'
+		Slider:
+			id: s3
+			step: 0.5
+			min: 0
+			max: 10
+			on_value: root.update_data('spinallow',s3.value)
+		Label:
+			text: '{}'.format(s3.value)
+
+    BoxLayout:
+		size_hint_y: None
+		height: '28dp'
+		Label:
+			text: 'Left Shoulder'
+
+		Slider:
+			id: s4
+			step: 0.5
+			min: 0
+			max: 10
+			on_value: root.update_data('shoulderleft',s4.value)
+
+		Label:
+			text: '{}'.format(s4.value)
+    BoxLayout:
+		size_hint_y: None
+		height: '28dp'
+		Label:
+			text: 'Right Shoulder'
+
+		Slider:
+			id: s5
+			step: 0.5
+			min: 0
+			max: 10
+			on_value: root.update_data('shoulderright',s5.value)
+		Label:
+			text: '{}'.format(s5.value)
+
+	BoxLayout:
+		size_hint_y: None
+		height: '28dp'
+		Label:
+			text: 'Left Hip'
+		Slider:
+			id: s6
+			step: 0.5
+			min: 0
+			max: 10
+			on_value: root.update_data('hipleft',s6.value)
+		Label:
+			text: '{}'.format(s6.value)
+	BoxLayout:
+		size_hint_y: None
+		height: '28dp'
+		Label:
+			text: 'Right Hip'
+		Slider:
+			id: s7
+			step: 0.5
+			min: 0
+			max: 10
+			on_value: root.update_data('hipright',s7.value)
+		Label:
+			text: '{}'.format(s7.value)
+
+
+
+	GridLayout:
+
+		cols: 6
+		spacing: '8dp'
+		size_hint_y: None
+		height: self.minimum_height
+
+
+		Label:
+			text: 'Emotion'
+
+		ToggleButton:
+			size_hint_y: None
+			height: '48dp'
+			text: 'Happy'
+			group: 'g2'
+			on_press: root.update_data('emotion','0')
+		ToggleButton:
+			size_hint_y: None
+			height: '48dp'
+			text: 'Good'
+			group: 'g2'
+			on_press: root.update_data('emotion','2.5')
+		ToggleButton:
+			size_hint_y: None
+			height: '48dp'
+			text: 'Satisfy'
+			state: 'down'
+			group: 'g2'
+			on_press: root.update_data('emotion','5')
+		ToggleButton:
+			size_hint_y: None
+			height: '48dp'
+			text: 'Stressed'
+			group: 'g2'
+			on_press: root.update_data('emotion','7.5')
+		ToggleButton:
+			size_hint_y: None
+			height: '48dp'
+			text: 'Angry'
+			group: 'g2'
+			on_press: root.update_data('emotion','10')
+
+
+
+
+
+
+

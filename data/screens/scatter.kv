@@ -1,0 +1,25 @@
+ShowcaseScreen:
+    name: 'Scatter'
+
+    Widget:
+
+        Scatter:
+            id: scatter
+            size_hint: None, None
+            size: image.size
+            #on_touch: root.updatecanvas()
+            MyImage:
+                id: image
+                #source: 'data/test.png'
+                #source: root.source_image
+                source: root.image.source
+                size: self.texture_size
+
+
+
+        #Label:
+        #    test: 'test'
+        #    #text: 'rotation: ' + str(scatter.rotation)
+        #    size_hint: .1,.1
+        #    pos: 100,100
+
