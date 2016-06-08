@@ -1,5 +1,5 @@
 
-rownr = 0
+rownr = 5
 head = False
 headlist = False
 columns = False
@@ -16,13 +16,23 @@ with open('test.csv') as inf:
 print "headlist: ", headlist
 print "columns : ", partlen
 
-with open('test.csv') as inf:
-    for line in inf:
-        parts = line.split(",") # split line into parts
-        if len(parts) > 1:   # if at least 2 parts/columns
-            if not head:
-                head = parts[rownr]
-            else:
-                print parts[rownr]   # print column 2
-    rownr +=1
-print "head: ", head
+for colum in range(partlen):
+    print "COLUM NAME: ", headlist[colum]
+    check_empty_data = True
+    with open('test.csv') as inf:
+        for line in inf:
+            parts = line.split(",") # split line into parts
+            if len(parts) > 1:   # if at least 2 parts/columns
+                if not head:
+                    head = parts[colum]
+                else:
+                    print parts[colum]   # print column 2
+            if parts[colum] == headlist[colum]:
+                print "header TOP"
+            elif parts[colum] != '"0"':
+                print "parts have value: ", parts[colum]
+                check_empty_data = False
+    if not check_empty_data:
+        print "DATA in: ", headlist[colum]
+    else:
+        print "EMPTY IN: ", headlist[colum]
