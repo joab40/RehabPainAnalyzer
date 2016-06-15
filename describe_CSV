@@ -5,3 +5,31 @@ haed1, head2, head3, head4
 2004,"1","2","2"
 2004,"1","2","2"
 
+
+headlist:  ['Date', 'emotion', 'headache', head4
+partlen: 4
+
+colum (for loop -> 1,2,3,4)
+
+parts: head1, head2, head3
+
+
+LOOP:
+get line
+    split line into parts.
+    head1
+    2004
+    2005
+    2006
+        head2
+        1
+        1
+        1
+            haed3
+            2
+            2
+            2
+
+if parts in specific column has value not = 0
+check_empty_data set to false. -> We have a value
+

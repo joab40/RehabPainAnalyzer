@@ -28,12 +28,13 @@ for colum in range(partlen):
         for line in inf:
             parts = line.split(",") # split line into parts
             if len(parts) > 1:   # if at least 2 parts/columns
+                print "NEW_CVS_FILE_LIST: ", new_cvs_file_list, " fethcning value: ", colum
                 if colum == 0:
                     print "start: count lines = 0"
                     new_cvs_file_list[colum] = parts[colum]
                 else:
                     print "countlines: ", countlines
-                    replace_append_data = new_cvs_file_list[colum]
+                    replace_append_data = new_cvs_file_list[colum -1]
                     new_cvs_file_list[colum] = replace_append_data + parts[colum]
 
                 if not head:
