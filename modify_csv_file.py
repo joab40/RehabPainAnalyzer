@@ -15,8 +15,10 @@ with open('test.csv') as inf:
 
 print "headlist: ", headlist
 print "columns : ", partlen
-new_cvs_file_list = [365]
-new_cvs_file_list[0] = "empty"
+new_cvs_file_list = []
+#new_cvs_file_list.append("empty")
+colum_with_values = []
+colum_with_no_values = []
 
 replace_append_data = ''
 
@@ -28,15 +30,7 @@ for colum in range(partlen):
         for line in inf:
             parts = line.split(",") # split line into parts
             if len(parts) > 1:   # if at least 2 parts/columns
-                print "NEW_CVS_FILE_LIST: ", new_cvs_file_list, " fethcning value: ", colum
-                if colum == 0:
-                    print "start: count lines = 0"
-                    new_cvs_file_list[colum] = parts[colum]
-                else:
-                    print "countlines: ", countlines
-                    replace_append_data = new_cvs_file_list[colum -1]
-                    new_cvs_file_list[colum] = replace_append_data + parts[colum]
-
+                #print "NEW_CVS_FILE_LIST: ", new_cvs_file_list, " fethcning value: ", colum
                 if not head:
                     head = parts[colum]
                 else:
@@ -49,5 +43,34 @@ for colum in range(partlen):
             countlines +=1
     if not check_empty_data:
         print "DATA in: ", headlist[colum]
+        colum_with_values.append(headlist[colum])
     else:
         print "EMPTY IN: ", headlist[colum]
+        colum_with_no_values.append(headlist[colum])
+
+print "These columes have legit valuse: ", colum_with_values
+for colum in range(partlen):
+    print "COLUM NAME: ", headlist[colum]
+    check_empty_data = True
+    countlines = 0
+    with open('test.csv') as inf:
+        for line in inf:
+            parts = line.split(",") # split line into parts
+            if len(parts) > 1:   # if at least 2 parts/columns
+                if colum == 0:
+                    new_cvs_file_list.append(parts[colum])
+                    #print "NEW_CVS_FILE_LIST: ", new_cvs_file_list, " fethcning value: ", colum
+                #elif headlist[colum] != parts[colum] and headlist[colum] in colum_with_values:
+                elif headlist[colum] in colum_with_values:
+                    if colum != 0:
+                        # reading new file structure
+                        read_copy_of_row = new_cvs_file_list[countlines]
+                        new_cvs_file_list[countlines] = read_copy_of_row + ',' + parts[colum]
+                        countlines +=1
+
+                    print headlist[colum]," -> ", parts[colum]
+
+for row in new_cvs_file_list:
+    print row
+
+print "column with missing valuse: ", colum_with_no_values
