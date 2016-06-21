@@ -1,3 +1,4 @@
+import matplotlib.pyplot as plt
 
 rownr = 5
 head = False
@@ -70,7 +71,23 @@ for colum in range(partlen):
 
                     print headlist[colum]," -> ", parts[colum]
 
+
+myfile = open('create.csv','w')
+
 for row in new_cvs_file_list:
     print row
+    myfile.write(row + '\n')
+
+myfile.close()
+
+fname = open('create.csv')
+plt.plotfile(fname, (colum_with_values), subplots=False)
+plt.xlabel(r'$date$')
+plt.ylabel(r'$levels$')
+
+
+
+plt.show()
+plt.savefig('data_graph.png')
 
 print "column with missing valuse: ", colum_with_no_values

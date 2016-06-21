@@ -1,4 +1,4 @@
-Date,emotion,headache,hipleft,hipright,shoulderleft,shoulderright,spinallow,spinalmiddle,spinalneck,Adj. Close*
+date,emotion,headache,hipleft,hipright,shoulderleft,shoulderright,spinallow,spinalmiddle,spinalneck,Adj. Close*
 "01/03/1991","5","1","3","8","3.0","0","3.0","0","1.5"
 "02/03/1991","4","2","2","8","0","0","0","0","5.0"
 "03/03/1991","3","1","2","9","0","0","0","0","5.0"
@@ -10,4 +10,4 @@ Date,emotion,headache,hipleft,hipright,shoulderleft,shoulderright,spinallow,spin
 "09/03/1991","1","1","3","8","0","0","0","0","5.0"
 "10/03/1991","1","1","3","8","0","0","0","0","5.0"
 "11/03/1991","1","1","3","8","0","0","0","0","5.0"
-"12/03/1991","1","1","3","8","0","0","0","0","5.0"
+"12/03/1991","1","1","3","1","0","0","0","0","5.0"
