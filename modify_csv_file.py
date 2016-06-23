@@ -1,4 +1,9 @@
 import matplotlib.pyplot as plt
+incsv='test.csv'
+utcsv='create.csv'
+
+def plotdata():
+    print "starting"
 
 rownr = 5
 head = False
@@ -27,7 +32,7 @@ for colum in range(partlen):
     print "COLUM NAME: ", headlist[colum]
     check_empty_data = True
     countlines = 0
-    with open('test.csv') as inf:
+    with open(incsv) as inf:
         for line in inf:
             parts = line.split(",") # split line into parts
             if len(parts) > 1:   # if at least 2 parts/columns
@@ -54,7 +59,7 @@ for colum in range(partlen):
     print "COLUM NAME: ", headlist[colum]
     check_empty_data = True
     countlines = 0
-    with open('test.csv') as inf:
+    with open(incsv) as inf:
         for line in inf:
             parts = line.split(",") # split line into parts
             if len(parts) > 1:   # if at least 2 parts/columns
@@ -72,7 +77,7 @@ for colum in range(partlen):
                     print headlist[colum]," -> ", parts[colum]
 
 
-myfile = open('create.csv','w')
+myfile = open(utcsv,'w')
 
 for row in new_cvs_file_list:
     print row
@@ -80,7 +85,7 @@ for row in new_cvs_file_list:
 
 myfile.close()
 
-fname = open('create.csv')
+fname = open(utcsv)
 plt.plotfile(fname, (colum_with_values), subplots=False)
 plt.xlabel(r'$date$')
 plt.ylabel(r'$levels$')
@@ -91,3 +96,6 @@ plt.show()
 plt.savefig('data_graph.png')
 
 print "column with missing valuse: ", colum_with_no_values
+
+
+plotdata()
